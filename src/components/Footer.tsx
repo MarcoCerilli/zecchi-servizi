@@ -16,12 +16,12 @@ function ZecchiLogoFooter() {
     <Link
       href="/"
       className="flex items-center gap-4 group"
-      aria-label="Zecchi Multiservizi Homepage"
+      aria-label="Ditta Individuale Zecchi Monica - Homepage"
     >
       <div className="relative h-20 w-20 rounded-2xl bg-white border border-white/20 p-2 shadow-lg transition-transform group-hover:scale-105 shrink-0">
         <Image
           src="/images/logo.png"
-          alt="Logo Zecchi"
+          alt="Logo Ditta Individuale Zecchi Monica"
           fill
           className="object-contain p-1.5"
           unoptimized
@@ -31,8 +31,8 @@ function ZecchiLogoFooter() {
         <span className="block font-headline text-2xl font-extrabold text-white tracking-tight leading-none">
           Zecchi
         </span>
-        <span className="text-primary text-xs font-bold uppercase tracking-[0.24em] mt-1 block">
-          Multiservizi
+        <span className="text-primary text-[11px] font-bold uppercase tracking-[0.18em] mt-1 block">
+          Ditta Individuale
         </span>
       </div>
     </Link>
@@ -51,11 +51,11 @@ export function Footer() {
           <div className="flex flex-col items-start space-y-5">
             <ZecchiLogoFooter />
             <p className="text-zinc-400 text-sm leading-relaxed max-w-xs">
-              Azienda multiservizi a{" "}
+              Ditta Individuale Zecchi Monica, attiva a{" "}
               <span className="text-white font-semibold">
                 Terracina e Provincia
               </span>
-              . Dal giardinaggio professionale all&apos;edilizia di qualità.
+              . Dal giardinaggio professionale ai piccoli lavori edili di qualità.
             </p>
             <div className="space-y-1.5 text-zinc-400 text-xs">
               <p className="flex items-center gap-2">
@@ -116,7 +116,7 @@ export function Footer() {
                   href="https://www.facebook.com/AziendaMultiserviziZecchi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook Zecchi Multiservizi"
+                  aria-label="Pagina Facebook"
                   className="h-9 w-9 rounded-full bg-[#1877F2]/90 hover:bg-[#1877F2] text-white flex items-center justify-center hover:scale-105 transition-all shadow-md"
                 >
                   <Facebook className="h-4 w-4" />
@@ -126,7 +126,7 @@ export function Footer() {
                   href="https://www.instagram.com/zecchimultiservizi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram Zecchi Multiservizi"
+                  aria-label="Profilo Instagram"
                   className="h-9 w-9 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white flex items-center justify-center hover:scale-105 transition-all shadow-md"
                 >
                   <Instagram className="h-4 w-4" />
@@ -136,7 +136,7 @@ export function Footer() {
 
             <div className="text-left lg:text-right space-y-1.5 text-zinc-500 text-xs">
               <p className="font-semibold text-zinc-400">
-                P. IVA 02990560597
+                Ditta Individuale Zecchi Monica · P. IVA 02990560597
               </p>
               <p>
                 <Link href="/privacy" className="hover:text-primary underline transition-colors">
@@ -144,7 +144,7 @@ export function Footer() {
                 </Link>
               </p>
               <p>
-                © {new Date().getFullYear()} Zecchi Multiservizi — Tutti i
+                © {new Date().getFullYear()} Ditta Individuale Zecchi Monica — Tutti i
                 diritti riservati
               </p>
               <p className="pt-1">

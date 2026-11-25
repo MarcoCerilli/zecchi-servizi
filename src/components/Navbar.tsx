@@ -12,7 +12,7 @@ function ZecchiLogo({ compact = false }: { compact?: boolean }) {
     <Link
       href="/"
       className="flex items-center gap-3 group"
-      aria-label="Zecchi Multiservizi Homepage"
+      aria-label="Ditta Individuale Zecchi Monica - Homepage"
     >
       <div
         className={cn(
@@ -23,7 +23,7 @@ function ZecchiLogo({ compact = false }: { compact?: boolean }) {
         <div className="relative w-full h-full">
           <Image
             src="/images/logo.png"
-            alt="Logo Zecchi Multiservizi"
+            alt="Logo Ditta Individuale Zecchi Monica"
             fill
             priority
             className="object-contain"
@@ -35,8 +35,8 @@ function ZecchiLogo({ compact = false }: { compact?: boolean }) {
         <span className="font-headline text-lg md:text-xl font-extrabold leading-none text-[#111c16] tracking-tight">
           Zecchi
         </span>
-        <span className="text-[10px] md:text-[11px] font-bold leading-tight text-emerald-700 uppercase tracking-[0.22em] mt-0.5">
-          Multiservizi
+        <span className="text-[9px] md:text-[10px] font-bold leading-tight text-emerald-700 uppercase tracking-[0.15em] mt-0.5 whitespace-nowrap">
+          Ditta Individuale
         </span>
       </div>
     </Link>

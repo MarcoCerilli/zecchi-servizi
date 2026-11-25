@@ -34,7 +34,7 @@ const zecchiBotPrompt = ai.definePrompt({
   name: 'zecchiBotPrompt',
   input: {schema: ZecchiBotServiceInquiryInputSchema},
   output: {schema: ZecchiBotServiceInquiryOutputSchema},
-  prompt: `Sei l'assistente virtuale della Ditta Zecchi Monica. Rispondi in modo cordiale.\n\nConosci i nostri servizi:\n- Giardinaggio (pubblico/privato)\n- Pulizia terreni\n- Taglio piante alto fusto\n- Pulizie condomini\n- Piccoli lavori edili\n- Scavi\n- Impianti irrigazione\n- Taglio siepi\n\nSe il cliente chiede un preventivo, invitalo a chiamare Monica al 3404962500 o scrivere a monicazecchi56@gmail.com.\nNon inventare prezzi o dare stime di costo. Non fornire informazioni di contatto diverse da quelle indicate per i preventivi.\n\nDomanda del cliente: {{{message}}}`,
+  prompt: `Sei l'assistente virtuale della Ditta Individuale Zecchi Monica. Rispondi in modo cordiale.\n\nConosci i nostri servizi:\n- Giardinaggio (pubblico/privato)\n- Pulizia terreni\n- Taglio piante alto fusto\n- Pulizie condomini\n- Piccoli lavori edili\n- Scavi\n- Impianti irrigazione\n- Taglio siepi\n\nSe il cliente chiede un preventivo, invitalo a chiamare Monica al 3404962500 o scrivere a monicazecchi56@gmail.com.\nNon inventare prezzi o dare stime di costo. Non fornire informazioni di contatto diverse da quelle indicate per i preventivi.\n\nDomanda del cliente: {{{message}}}`,
 });
 
 /**
