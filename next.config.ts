@@ -36,13 +36,13 @@ const nextConfig: NextConfig = {
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'zecchimultiservizi.it' }],
-        destination: 'https://zecchiserviziterracina.it/:path*',
+        destination: 'https://www.zecchiserviziterracina.it/:path*',
         permanent: true,
       },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.zecchimultiservizi.it' }],
-        destination: 'https://zecchiserviziterracina.it/:path*',
+        destination: 'https://www.zecchiserviziterracina.it/:path*',
         permanent: true,
       },
       {
@@ -54,7 +54,7 @@ const nextConfig: NextConfig = {
             value: '(?:www\\.)?zecchimultiservizi\\.it',
           },
         ],
-        destination: 'https://zecchiserviziterracina.it/:path*',
+        destination: 'https://www.zecchiserviziterracina.it/:path*',
         permanent: true,
       },
     ];
