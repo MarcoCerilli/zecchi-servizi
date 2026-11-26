@@ -10,11 +10,26 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
+const ChatHistoryItemSchema = z.object({
+  role: z.enum(['user', 'bot']),
+  text: z.string().max(1000),
+});
+
 /**
  * Defines the input schema for the Zecchi Bot service inquiry flow.
  */
 const ZecchiBotServiceInquiryInputSchema = z.object({
-  message: z.string().describe('The user\'s message to the Zecchi Bot.'),
+  message: z
+    .string()
+    .trim()
+    .min(1, 'Il messaggio non può essere vuoto.')
+    .max(1000, 'Il messaggio è troppo lungo.')
+    .describe("The user's message to the Zecchi Bot."),
+  history: z
+    .array(ChatHistoryItemSchema)
+    .max(10)
+    .optional()
+    .describe('Recent conversation turns for context.'),
 });
 export type ZecchiBotServiceInquiryInput = z.infer<typeof ZecchiBotServiceInquiryInputSchema>;
 
@@ -22,7 +37,7 @@ export type ZecchiBotServiceInquiryInput = z.infer<typeof ZecchiBotServiceInquir
  * Defines the output schema for the Zecchi Bot service inquiry flow.
  */
 const ZecchiBotServiceInquiryOutputSchema = z.object({
-  response: z.string().describe('The Zecchi Bot\'s response to the user.'),
+  response: z.string().describe("The Zecchi Bot's response to the user."),
 });
 export type ZecchiBotServiceInquiryOutput = z.infer<typeof ZecchiBotServiceInquiryOutputSchema>;
 
@@ -32,9 +47,37 @@ export type ZecchiBotServiceInquiryOutput = z.infer<typeof ZecchiBotServiceInqui
  */
 const zecchiBotPrompt = ai.definePrompt({
   name: 'zecchiBotPrompt',
-  input: {schema: ZecchiBotServiceInquiryInputSchema},
+  input: {
+    schema: z.object({
+      message: z.string(),
+      conversationContext: z.string(),
+    }),
+  },
   output: {schema: ZecchiBotServiceInquiryOutputSchema},
-  prompt: `Sei l'assistente virtuale della Ditta Individuale Zecchi Monica. Rispondi in modo cordiale.\n\nConosci i nostri servizi:\n- Giardinaggio (pubblico/privato)\n- Pulizia terreni\n- Taglio piante alto fusto\n- Pulizie condomini\n- Piccoli lavori edili\n- Scavi\n- Impianti irrigazione\n- Taglio siepi\n\nSe il cliente chiede un preventivo, invitalo a chiamare Monica al 3404962500 o scrivere a monicazecchi56@gmail.com.\nNon inventare prezzi o dare stime di costo. Non fornire informazioni di contatto diverse da quelle indicate per i preventivi.\n\nDomanda del cliente: {{{message}}}`,
+  prompt: `Sei l'assistente virtuale su WhatsApp di Zecchi Monica, realtà artigiana attiva a Terracina e provincia di Latina. Rispondi in italiano con tono cordiale, diretto e conciso (stile chat WhatsApp, massimo 3-4 frasi).
+
+Servizi offerti:
+- Giardinaggio e manutenzione aree verdi (pubblico/privato)
+- Pulizia terreni e decespugliamento
+- Potatura e taglio piante ad alto fusto
+- Pulizie condomini, residence e privati
+- Piccoli lavori edili, muratura, recinzioni e vialetti
+- Scavi e movimento terra
+- Impianti di irrigazione automatici
+- Taglio siepi
+
+Regole:
+- Se il cliente chiede un preventivo o un sopralluogo gratuito, invitalo a chiamare Monica al 340 496 2500 (o Fabio al 333 389 5067) oppure scrivere a monicazecchi56@gmail.com.
+- Non inventare prezzi né fornire stime di costo.
+- Non fornire contatti diversi da quelli sopra indicati.
+- Non usare formattazione Markdown complessa (niente titoli o tabelle).
+
+{{#if conversationContext}}
+Cronologia recente della chat:
+{{{conversationContext}}}
+{{/if}}
+
+Nuovo messaggio del cliente: {{{message}}}`,
 });
 
 /**
@@ -49,7 +92,16 @@ const zecchiBotServiceInquiryFlow = ai.defineFlow(
     outputSchema: ZecchiBotServiceInquiryOutputSchema,
   },
   async (input) => {
-    const {output} = await zecchiBotPrompt(input);
+    const validated = ZecchiBotServiceInquiryInputSchema.parse(input);
+    const conversationContext = (validated.history ?? [])
+      .slice(-6)
+      .map((item) => `${item.role === 'user' ? 'Cliente' : 'Assistente'}: ${item.text}`)
+      .join('\n');
+
+    const {output} = await zecchiBotPrompt({
+      message: validated.message,
+      conversationContext,
+    });
     return output!;
   }
 );

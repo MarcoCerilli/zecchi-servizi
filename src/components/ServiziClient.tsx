@@ -158,8 +158,8 @@ export function ServiziClient() {
             I Nostri <span className="text-primary">Servizi</span>
           </h1>
           <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto">
-            Ditta Individuale Zecchi Monica: esperienza artigiana e attrezzature
-            dedicate a Terracina e provincia.
+            Zecchi Monica: esperienza artigiana e attrezzature dedicate a
+            Terracina e provincia.
           </p>
 
           {/* Indice rapido servizi */}

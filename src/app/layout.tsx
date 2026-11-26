@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { AiAssistant } from '@/components/AiAssistant';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { LeadPopup } from '@/components/LeadPopup';
 
@@ -17,10 +16,10 @@ export const metadata: Metadata = {
   },
   
   title: {
-    default: 'Ditta Individuale Zecchi Monica | Giardinaggio, Scavi ed Edilizia a Terracina',
-    template: '%s | Ditta Individuale Zecchi Monica',
+    default: 'Zecchi Monica | Giardinaggio, Scavi ed Edilizia a Terracina',
+    template: '%s | Zecchi Monica',
   },
-  description: 'Ditta Individuale Zecchi Monica: specialisti in potature alto fusto, manutenzione giardini, scavi e piccoli lavori edili a Terracina. Soluzioni concrete per privati e condomini.',
+  description: 'Zecchi Monica: specialisti in potature alto fusto, manutenzione giardini, scavi e piccoli lavori edili a Terracina. Soluzioni concrete per privati e condomini.',
   keywords: [
     'giardinaggio Terracina', 
     'potatura alto fusto Terracina', 
@@ -32,20 +31,20 @@ export const metadata: Metadata = {
     'lavori edili Terracina', 
     'impianti irrigazione'
   ],
-  authors: [{ name: 'Ditta Individuale Zecchi Monica' }],
-  creator: 'Ditta Individuale Zecchi Monica',
+  authors: [{ name: 'Zecchi Monica' }],
+  creator: 'Zecchi Monica',
   
   openGraph: {
-    title: 'Ditta Individuale Zecchi Monica | Giardinaggio ed Edilizia a Terracina',
+    title: 'Zecchi Monica | Giardinaggio ed Edilizia a Terracina',
     description: 'Professionalità e cura nel giardinaggio, scavi e manutenzioni edili. Contattaci per un preventivo gratuito.',
     url: 'https://www.zecchiserviziterracina.it',
-    siteName: 'Ditta Individuale Zecchi Monica',
+    siteName: 'Zecchi Monica',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ditta Individuale Zecchi Monica - Manutenzione Verde ed Edilizia a Terracina',
+        alt: 'Zecchi Monica - Manutenzione Verde ed Edilizia a Terracina',
       },
     ],
     locale: 'it_IT',
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
   
   twitter: {
     card: 'summary_large_image',
-    title: 'Ditta Individuale Zecchi Monica - Terracina',
+    title: 'Zecchi Monica - Terracina',
     description: 'Specialisti in potature, scavi e lavori edili.',
     images: ['/og-image.jpg'],
   },
@@ -83,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className={cn('font-body antialiased min-h-screen bg-background flex flex-col')}>
+      <body className={cn('font-body antialiased min-h-screen bg-background flex flex-col overflow-x-hidden')}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -153,8 +152,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Chiusura Pagina */}
         <Footer />
         
-        {/* Widget Flottanti e Interazioni */}
-        <AiAssistant /> 
+        {/* Widget Chat WhatsApp AI interno */}
         <WhatsAppButton /> 
         
         {/* Utility e Notifiche */}

@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata = {
   title: 'Contatti e Preventivi Gratuiti',
-  description: 'Contatta la Ditta Individuale Zecchi Monica a Terracina per un preventivo gratuito: giardinaggio professionale, potature, scavi ed edilizia.',
+  description: 'Contatta Zecchi Monica a Terracina per un preventivo gratuito: giardinaggio professionale, potature, scavi ed edilizia.',
   alternates: {
     canonical: '/contatti',
   },
@@ -31,13 +31,13 @@ export default function ContattiPage() {
           <div className="max-w-2xl space-y-4 text-center md:text-left">
             <div className="inline-flex items-center gap-2 bg-primary/15 text-primary px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide border border-primary/30">
               <Sparkles className="h-3.5 w-3.5" />
-              <span>Ditta Individuale Zecchi Monica</span>
+              <span>Terracina &amp; Provincia</span>
             </div>
             <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
               Siamo al tuo <span className="text-primary">servizio.</span>
             </h1>
             <p className="text-zinc-300 text-base md:text-lg leading-relaxed">
-              Hai un progetto in mente? La Ditta Individuale Zecchi Monica è il tuo punto di riferimento di fiducia a{' '}
+              Hai un progetto in mente? Zecchi Monica è il tuo punto di riferimento di fiducia a{' '}
               <span className="text-white font-semibold">Terracina</span> e provincia per soluzioni concrete e durature.
             </p>
           </div>
@@ -132,7 +132,7 @@ export default function ContattiPage() {
             {/* Dati Fiscali */}
             <div className="p-5 rounded-2xl surface-light-card space-y-3">
               <h3 className="flex items-center gap-2 text-emerald-900/70 font-bold text-xs uppercase tracking-wider">
-                <FileText className="h-4 w-4 text-primary" /> Dati Fiscali · Ditta Individuale
+                <FileText className="h-4 w-4 text-primary" /> Dati Fiscali
               </h3>
               <div className="pt-1">
                 <span className="block text-[11px] text-emerald-950/55 font-semibold uppercase">
@@ -168,7 +168,7 @@ export default function ContattiPage() {
             <div className="relative group h-[340px] lg:h-full min-h-[380px] overflow-hidden rounded-2xl border border-emerald-950/15 shadow-xl">
               <Image
                 src={placeholderImages.contact.src}
-                alt="Contatti Ditta Individuale Zecchi Monica"
+                alt="Contatti Zecchi Monica"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

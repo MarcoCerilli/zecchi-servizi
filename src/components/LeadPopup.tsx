@@ -41,7 +41,7 @@ export function LeadPopup() {
 
   return (
     <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm animate-in fade-in duration-300">
-      <div className="relative w-full max-w-md bg-zinc-950 border border-primary/40 rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(87,195,34,0.2)] animate-in zoom-in-95 duration-300">
+      <div className="relative w-full max-w-md max-h-[90dvh] overflow-y-auto bg-zinc-950 border border-primary/40 rounded-3xl shadow-[0_0_40px_rgba(87,195,34,0.2)] animate-in zoom-in-95 duration-300">
         <button
           onClick={closePopup}
           aria-label="Chiudi finestra"

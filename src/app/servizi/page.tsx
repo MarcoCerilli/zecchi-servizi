@@ -4,7 +4,7 @@ import { ServiziClient } from "@/components/ServiziClient";
 export const metadata: Metadata = {
   title: "Servizi di Giardinaggio, Potature, Scavi ed Edilizia a Terracina",
   description:
-    "Scopri i servizi della Ditta Individuale Zecchi Monica a Terracina e provincia: manutenzione giardini, potatura alberi alto fusto, scavi, piccoli lavori edili, impianti di irrigazione e pulizie condomini.",
+    "Scopri i servizi di Zecchi Monica a Terracina e provincia: manutenzione giardini, potatura alberi alto fusto, scavi, piccoli lavori edili, impianti di irrigazione e pulizie condomini.",
   alternates: {
     canonical: "/servizi",
   },
@@ -14,7 +14,7 @@ export default function ServiziPage() {
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Servizi Ditta Individuale Zecchi Monica - Terracina",
+    name: "Servizi Zecchi Monica - Terracina",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Manutenzione Giardini a Terracina" },
       { "@type": "ListItem", position: 2, name: "Potatura Alto Fusto e Abbattimenti" },

@@ -69,7 +69,7 @@ function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src={placeholderImages.hero.src}
-          alt="Giardino curato - Ditta Individuale Zecchi Monica"
+          alt="Giardino curato - Zecchi Monica"
           fill
           sizes="100vw"
           className="object-cover scale-[1.02] animate-in fade-in duration-1000"
@@ -85,7 +85,7 @@ function HeroSection() {
         <div className="max-w-2xl space-y-6">
           <div className="inline-flex items-center gap-2 bg-zinc-900/80 text-primary px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide border border-primary/30 backdrop-blur-md shadow-lg">
             <Sparkles className="h-3.5 w-3.5" />
-            <span>Ditta Individuale · Terracina &amp; Dintorni</span>
+            <span>Terracina &amp; Dintorni</span>
           </div>
 
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
@@ -96,10 +96,8 @@ function HeroSection() {
           </h1>
 
           <p className="text-zinc-300 text-base md:text-lg leading-relaxed max-w-xl">
-            Dalle potature ad alto fusto agli scavi edili. La{" "}
-            <span className="text-white font-semibold">
-              Ditta Individuale Zecchi Monica
-            </span>{" "}
+            Dalle potature ad alto fusto agli scavi edili.{" "}
+            <span className="text-white font-semibold">Zecchi Monica</span>{" "}
             offre esperienza artigiana e cura dei dettagli per valorizzare i
             tuoi spazi esterni e condominiali.
           </p>
@@ -259,17 +257,14 @@ function AboutSection() {
           <div className="space-y-6">
             <div className="space-y-3">
               <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">
-                Chi Siamo · Ditta Individuale
+                Chi Siamo
               </span>
               <h2 className="font-headline text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight">
                 Esperienza artigiana,{" "}
                 <span className="text-primary">cura dei dettagli.</span>
               </h2>
               <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
-                La{" "}
-                <span className="text-white font-semibold">
-                  Ditta Individuale Zecchi Monica
-                </span>{" "}
+                <span className="text-white font-semibold">Zecchi Monica</span>{" "}
                 unisce la precisione nella cura del verde alla solida esperienza
                 nei piccoli interventi edili e di manutenzione. Trattiamo ogni
                 proprietà a Terracina e provincia come se fosse la nostra.

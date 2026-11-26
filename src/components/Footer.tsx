@@ -16,12 +16,12 @@ function ZecchiLogoFooter() {
     <Link
       href="/"
       className="flex items-center gap-4 group"
-      aria-label="Ditta Individuale Zecchi Monica - Homepage"
+      aria-label="Zecchi Monica - Homepage"
     >
       <div className="relative h-20 w-20 rounded-2xl bg-white border border-white/20 p-2 shadow-lg transition-transform group-hover:scale-105 shrink-0">
         <Image
           src="/images/logo.png"
-          alt="Logo Ditta Individuale Zecchi Monica"
+          alt="Logo Zecchi Monica"
           fill
           className="object-contain p-1.5"
           unoptimized
@@ -32,7 +32,7 @@ function ZecchiLogoFooter() {
           Zecchi
         </span>
         <span className="text-primary text-[11px] font-bold uppercase tracking-[0.18em] mt-1 block">
-          Ditta Individuale
+          Verde &amp; Edilizia
         </span>
       </div>
     </Link>
@@ -51,7 +51,7 @@ export function Footer() {
           <div className="flex flex-col items-start space-y-5">
             <ZecchiLogoFooter />
             <p className="text-zinc-400 text-sm leading-relaxed max-w-xs">
-              Ditta Individuale Zecchi Monica, attiva a{" "}
+              Zecchi Monica, attiva a{" "}
               <span className="text-white font-semibold">
                 Terracina e Provincia
               </span>
@@ -144,7 +144,7 @@ export function Footer() {
                 </Link>
               </p>
               <p>
-                © {new Date().getFullYear()} Ditta Individuale Zecchi Monica — Tutti i
+                © {new Date().getFullYear()} Zecchi Monica — Tutti i
                 diritti riservati
               </p>
               <p className="pt-1">
