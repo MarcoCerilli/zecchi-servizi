@@ -31,6 +31,34 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'zecchimultiservizi.it' }],
+        destination: 'https://zecchiserviziterracina.it/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.zecchimultiservizi.it' }],
+        destination: 'https://zecchiserviziterracina.it/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-host',
+            value: '(?:www\\.)?zecchimultiservizi\\.it',
+          },
+        ],
+        destination: 'https://zecchiserviziterracina.it/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         '/private/', // Altre eventuali rotte private
       ],
     },
-    sitemap: 'https://zecchimultiservizi.it/sitemap.xml',
+    sitemap: 'https://zecchiserviziterracina.it/sitemap.xml',
   }
 }

@@ -1,8 +1,3 @@
-# Firebase Studio
+# Zecchi Servizi
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
-
-
-# AziendaMultiservizi
+Sito web ufficiale della **Ditta Individuale Zecchi Monica** (`zecchiserviziterracina.it`) — Giardinaggio, potature ad alto fusto, scavi e piccoli lavori edili a Terracina e provincia.

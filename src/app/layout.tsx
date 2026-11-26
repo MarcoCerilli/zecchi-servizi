@@ -11,7 +11,10 @@ import { LeadPopup } from '@/components/LeadPopup';
 
 export const metadata: Metadata = {
   // MetadataBase è cruciale per risolvere gli URL della sitemap e delle immagini OG su Vercel
-  metadataBase: new URL('https://zecchimultiservizi.it'),
+  metadataBase: new URL('https://zecchiserviziterracina.it'),
+  alternates: {
+    canonical: '/',
+  },
   
   title: {
     default: 'Ditta Individuale Zecchi Monica | Giardinaggio, Scavi ed Edilizia a Terracina',
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ditta Individuale Zecchi Monica | Giardinaggio ed Edilizia a Terracina',
     description: 'Professionalità e cura nel giardinaggio, scavi e manutenzioni edili. Contattaci per un preventivo gratuito.',
-    url: 'https://zecchimultiservizi.it',
+    url: 'https://zecchiserviziterracina.it',
     siteName: 'Ditta Individuale Zecchi Monica',
     images: [
       {
@@ -91,9 +94,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "legalName": "Zecchi Monica",
               "vatID": "IT02990560597",
               "taxID": "ZCCMNC72B44L120G",
-              "image": "https://zecchimultiservizi.it/og-image.jpg",
-              "@id": "https://zecchimultiservizi.it",
-              "url": "https://zecchimultiservizi.it",
+              "image": "https://zecchiserviziterracina.it/og-image.jpg",
+              "@id": "https://zecchiserviziterracina.it",
+              "url": "https://zecchiserviziterracina.it",
               "telephone": "+393404962500",
               "email": "monicazecchi56@gmail.com",
               "priceRange": "$$",

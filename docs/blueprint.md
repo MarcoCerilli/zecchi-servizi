@@ -1,4 +1,4 @@
-# **App Name**: Zecchi Soluzioni
+# **App Name**: Zecchi Servizi
 
 ## Core Features:
 
